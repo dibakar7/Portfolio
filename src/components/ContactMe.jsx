@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactMe = ({ dayTheme }) => {
   return (
-    <div className={`w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'day-theme' : 'night-theme'}`}>
+    <div className={`w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
       
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-8">

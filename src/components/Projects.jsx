@@ -68,7 +68,7 @@ const Projects = ({ dayTheme }) => {
 
   return (
     <div
-      className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? 'bg-white text-gray-800' : 'bg-gray-900 text-gray-200'} p-10`}>
+      className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} p-10`}>
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
         <hr className="flex-grow border-t border-gray-400" />
@@ -82,7 +82,7 @@ const Projects = ({ dayTheme }) => {
           <div
             key={index}
             className={`p-6 rounded-lg shadow-lg ${
-              dayTheme ? 'bg-gray-100' : 'bg-gray-800'
+              dayTheme ? 'bg-white' : 'bg-gray-800'
             } flex flex-col justify-between space-y-4 min-h-80`}
           >
             {/* Project Title */}
@@ -130,6 +130,11 @@ const Projects = ({ dayTheme }) => {
             </ul>
           </div>
         ))}
+      </div>
+      <div className="flex items-center justify-center w-full pt-10">
+        <hr className="flex-grow border-t border-gray-400" />
+        <span className={`mx-4 text-2xl font-bold tracking-wide ${dayTheme ? 'text-black' : 'text-white'}`}>*******</span>
+        <hr className="flex-grow border-t border-gray-400" />
       </div>
     </div>
   );

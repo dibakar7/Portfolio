@@ -20,7 +20,7 @@ const platforms = [
 
 const CodingPlatforms = ({ dayTheme }) => {
   return (
-    <div className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? `day-theme` : `night-theme`} p-10`}>
+    <div className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} p-10`}>
       
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
