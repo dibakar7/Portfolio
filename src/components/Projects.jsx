@@ -56,7 +56,7 @@ const Projects = ({ dayTheme }) => {
     },
     {
       title: 'Portfolio Website',
-      links: { github: '#', website: '#' },
+      links: { github: 'https://github.com/dibakar7/Portfolio', website: 'https://portfolio-dibakar.netlify.app/' },
       date: 'January, 2025',
       tech: 'React, Tailwind CSS',
       details: [
@@ -72,7 +72,7 @@ const Projects = ({ dayTheme }) => {
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
         <hr className="flex-grow border-t border-gray-400" />
-        <span className="mx-4 text-3xl font-bold tracking-wide">Projects</span>
+        <span className="mx-4 text-3xl font-bold tracking-wide xs:text-2xl">Projects</span>
         <hr className="flex-grow border-t border-gray-400" />
       </div>
 

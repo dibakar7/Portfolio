@@ -6,11 +6,11 @@ import { GoDownload } from "react-icons/go";
 
 const Header = ({dayTheme, setDayTheme}) => {
   return (
-    <div className={`fixed top-0 left-0 w-full h-16 z-50 sm:px-10 md:px-10 shadow-md flex items-center justify-between xs:px-5 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
+    <div className={`fixed top-0 left-0 w-full h-16 z-50 sm:px-10 md:px-10 shadow-md flex items-center justify-between xs:px-5 xs:h-10 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
       <div className="w-ex mx-auto h-full flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-4">
-          <img src={Icon} alt="icon" className="w-8 h-8 rounded-md" />
+          <img src={Icon} alt="icon" className="w-8 h-8 rounded-md xs:w-6 xs:h-6" />
           <span className="font-semibold text-lg hidden sm:block">Dibakar's Portfolio</span>
         </div>
 
@@ -21,7 +21,7 @@ const Header = ({dayTheme, setDayTheme}) => {
           <button className="flex items-center gap-1 hover:underline">
             <a href='https://drive.google.com/file/d/1onCPuD_2WPMDtRPXJ6WKgcAhu66LSotw/view?usp=sharing' target='_blank' rel='noreferrer'><span className="inline xs:hidden">Download</span></a>
             <span className="xs:inline-block sm:hidden">
-              <GoDownload className="w-6 h-6" />
+              <GoDownload className="w-6 h-6 xs:w-4 xs:h-4" onClick={()=> window.open("https://drive.google.com/file/d/1onCPuD_2WPMDtRPXJ6WKgcAhu66LSotw/view?usp=sharing")} />
             </span>
           </button>
 
@@ -29,7 +29,7 @@ const Header = ({dayTheme, setDayTheme}) => {
             onClick={() => setDayTheme((prev) => !prev)}
             src={dayTheme ? nightThemeIcon : dayThemeIcon}
             alt="Toggle Theme"
-            className="w-8 h-8 cursor-pointer"
+            className="w-8 h-8 cursor-pointer xs:w-6 xs:h-6"
           />
         </div>
       </div>

@@ -9,7 +9,7 @@ const Experience = ({ dayTheme }) => {
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-12">
         <hr className="flex-grow border-t border-gray-400" />
-        <span className={`mx-4 text-3xl font-bold tracking-wide ${dayTheme ? 'text-black' : 'text-white'}`}>Experience</span>
+        <span className={`mx-4 text-3xl font-bold tracking-wide xs:text-2xl ${dayTheme ? 'text-black' : 'text-white'}`}>Experience</span>
         <hr className="flex-grow border-t border-gray-400" />
       </div>
 

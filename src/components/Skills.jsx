@@ -5,6 +5,8 @@ import restapi from "../assets/restapi.png"
 import colab from "../assets/colab.png"
 import langchain from "../assets/1711873462713.png"
 import fastapi from "../assets/fastapi.svg"
+import Pytorch from "../assets/pytorch-icon.png"
+import YOLOv8 from "../assets/YOLOv8-icon.png"
 
 const skillCategories = [
   {
@@ -15,6 +17,8 @@ const skillCategories = [
       { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
       { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "PyTorch", logo: Pytorch },
+      { name: "YOLOv8", logo: YOLOv8 },
     ],
   },
   {
@@ -23,11 +27,11 @@ const skillCategories = [
       { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
       { name: "CSS", logo: "https://static.cdnlogo.com/logos/c/18/css.svg"},
       { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "REST API", logo: restapi }, // Custom placeholder icon
-      { name: "JWT", logo: "https://static.cdnlogo.com/logos/j/20/jwt.svg" }, // Custom placeholder icon
+      { name: "REST API", logo: restapi },
+      { name: "JWT", logo: "https://static.cdnlogo.com/logos/j/20/jwt.svg" },
       { name: "VCS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "Postman", logo: "https://static.cdnlogo.com/logos/p/20/postman.svg" }, // Direct link to Postman logo
+      { name: "Postman", logo: "https://static.cdnlogo.com/logos/p/20/postman.svg" },
       { name: "Google Colab", logo: colab },
       { name: "Pinecone", logo: "https://static.cdnlogo.com/logos/p/46/pinecone.svg" },
       { name: "LangChain", logo: langchain },
@@ -54,7 +58,7 @@ const Skills = ({ dayTheme }) => {
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
         <hr className="flex-grow border-t border-gray-400" />
-        <span className="mx-4 text-3xl font-bold tracking-wide">Skills</span>
+        <span className="mx-4 text-3xl font-bold tracking-wide xs:text-2xl">Skills</span>
         <hr className="flex-grow border-t border-gray-400" />
       </div>
 
@@ -62,7 +66,7 @@ const Skills = ({ dayTheme }) => {
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillCategories.map((category, index) => (
           <div key={index} className="flex flex-col items-center">
-            <h3 className="text-2xl font-semibold mb-4">{category.category}</h3>
+            <h3 className="text-2xl font-semibold mb-4 xs:text-xl">{category.category}</h3>
             <div className="flex flex-wrap justify-center gap-6">
               {category.skills.map((skill, skillIndex) => (
                 <div

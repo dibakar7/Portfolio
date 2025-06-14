@@ -11,7 +11,7 @@ import AboutMeContact from "./components/AboutMeContact";
 import ContactMe from "./components/ContactMe";
 
 function App() {
-  const [dayTheme, setDayTheme] = useState(false);
+  const [dayTheme, setDayTheme] = useState(true);
   return (
     <div className={`relative overflow-hidden ${dayTheme ? `gray-primary-color`: `bg-primary-color`}`}>
       {/* <PortfolioBackground /> */}

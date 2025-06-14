@@ -8,7 +8,7 @@ const Education = ({ dayTheme }) => {
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-12">
         <hr className="flex-grow border-t border-gray-400" />
-        <span className={`mx-4 text-3xl font-bold tracking-wide ${dayTheme ? 'text-black' : 'text-white'}`}>Education</span>
+        <span className={`mx-4 text-3xl font-bold tracking-wide xs:text-2xl ${dayTheme ? 'text-black' : 'text-white'}`}>Education</span>
         <hr className="flex-grow border-t border-gray-400" />
       </div>
 
@@ -33,7 +33,7 @@ const Education = ({ dayTheme }) => {
         }].map((edu, index) => (
           <div key={index} className="relative pl-12">
             {/* Marker */}
-            <div className="absolute top-2 left-1 w-6 h-6 bg-white border-4 border-green-500 rounded-full shadow-md"></div>
+            <div className="absolute top-2 left-1 w-6 h-6 bg-white border-4 border-blue-500 rounded-full shadow-md"></div>
 
             {/* Card */}
             <div className={`rounded-xl p-6 flex flex-row gap-6 items-start xs:flex-col transition-all duration-300 ${dayTheme ? 'bg-white' : 'bg-gray-800'} shadow-lg`}>
