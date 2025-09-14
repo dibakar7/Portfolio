@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import TypeAnimationComp from './TypeAnimationComp'
-import Portfolio from "../assets/portfolio-photo-sh.png"
+// import Portfolio from "../assets/portfolio-photo-sh.png"
+import Portfolio from "../assets/shirt-image-rbg.png"
 
 const AboutMe = ({ dayTheme }) => {
   const stringArray = ["Software Engineer", "Fullstack Developer", "AI/ML Enthusiast"]

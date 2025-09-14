@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useRef} from "react";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Education from "./components/Education";
@@ -11,12 +11,16 @@ import AboutMeContact from "./components/AboutMeContact";
 import ContactMe from "./components/ContactMe";
 
 function App() {
-  const [dayTheme, setDayTheme] = useState(true);
+  const contactRef = useRef(null);
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({behavior: "smooth"});
+  }
+  const [dayTheme, setDayTheme] = useState(false);
   return (
     <div className={`relative overflow-hidden ${dayTheme ? `gray-primary-color`: `bg-primary-color`}`}>
       {/* <PortfolioBackground /> */}
       <div className="flex flex-col w-full justify-between items-center">
-        <Header dayTheme={dayTheme} setDayTheme={setDayTheme} />
+        <Header dayTheme={dayTheme} setDayTheme={setDayTheme} scrollToContact={scrollToContact}/>
       </div>
       <div className="flex flex-col w-full justify-between items-center relative z-0 pt-36">
         <AboutMe dayTheme={dayTheme} />
@@ -26,7 +30,7 @@ function App() {
         <Skills dayTheme={dayTheme} />
         <Projects dayTheme={dayTheme} />
         <CodingPlatforms dayTheme={dayTheme} />
-        <ContactMe dayTheme={dayTheme} />
+        <ContactMe dayTheme={dayTheme} ref={contactRef} className="scroll-mt-20"/>
         <Footer dayTheme={dayTheme} />
       </div>
     </div>

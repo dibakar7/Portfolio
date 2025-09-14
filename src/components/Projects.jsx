@@ -2,12 +2,14 @@ import React from 'react';
 import githubWhite from "../assets/github-mark-white.png"
 import githubBlack from "../assets/github-mark.png"
 import website from "../assets/website.png"
+import doc_archive from "../assets/doc-archive-bgi-1.png"
 
 const Projects = ({ dayTheme }) => {
   const projects = [
     {
       title: 'Doc-Archive',
       links: { github: 'https://github.com/dibakar7/doc-archive', website: 'https://doc-archive.onrender.com/' },
+      background_image: doc_archive,
       date: 'May 2024',
       tech: 'Python, MiniLM, FastAPI, Pinecone, LangChain',
       details: [
@@ -18,6 +20,7 @@ const Projects = ({ dayTheme }) => {
     {
       title: 'SpamMarker',
       links: { github: 'https://github.com/dibakar7/SpamMarker' },
+      background_image: doc_archive,
       date: 'April 2024',
       tech: 'Django Web Framework, REST API, JWT, MySQL, Postman',
       details: [
@@ -27,6 +30,7 @@ const Projects = ({ dayTheme }) => {
     },
     {
       title: 'Malware Detection using ML',
+      background_image: doc_archive,
       date: 'November 2022 – April 2023',
       tech: 'Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Google Colab',
       details: [
@@ -37,6 +41,7 @@ const Projects = ({ dayTheme }) => {
     {
       title: 'Travel Advisor',
       links: { github: 'https://github.com/dibakar7/Travel-Advisor', website: 'https://travel-advisor-db.netlify.app/' },
+      background_image: doc_archive,
       date: 'July 2022 – November 2022',
       tech: 'HTML, React, Google Map and Places API, Rapid API',
       details: [
@@ -47,6 +52,7 @@ const Projects = ({ dayTheme }) => {
     {
       title: 'Weather App',
       links: { github: 'https://github.com/dibakar7/Weather-App', website: 'https://weather-db.netlify.app/' },
+      background_image: doc_archive,
       date: 'July 2022',
       tech: 'HTML, CSS, JavaScript, OpenWeatherMap API',
       details: [
@@ -57,6 +63,7 @@ const Projects = ({ dayTheme }) => {
     {
       title: 'Portfolio Website',
       links: { github: 'https://github.com/dibakar7/Portfolio', website: 'https://portfolio-dibakar.netlify.app/' },
+      background_image: doc_archive,
       date: 'January, 2025',
       tech: 'React, Tailwind CSS',
       details: [

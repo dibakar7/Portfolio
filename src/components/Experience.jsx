@@ -1,6 +1,6 @@
 import React from 'react';
-import lcLogo from "../assets/lc-logo.jpg";
-import edlLogo from "../assets/edl-logo.PNG";
+import suitcase from "../assets/suitcase.png"
+import se from "../assets/programmer.png"
 
 const Experience = ({ dayTheme }) => {
   return (
@@ -20,25 +20,34 @@ const Experience = ({ dayTheme }) => {
 
         {/* Experience Cards */}
         {[{
+          title: "Research Intern (AI/ML)",
+          company: "TCS - Research",
+          link: "https://www.linkedin.com/showcase/tcs-research/",
+          date: "August, 2025 - Present",
+          logo: se,
+          responsibilities: [
+            "Currently engaged in literature review and exploring the implementation of various machine learning approaches, including the integration of vision-language models (VLMs) and large language models (LLMs), while leveraging different cloud platforms AWS, Azure."
+          ]
+        },
+          {
           title: "Software Engineer Intern",
           company: "LawCrats",
           link: "https://www.linkedin.com/company/lawcrats/",
           date: "July, 2024 - December, 2024",
-          logo: lcLogo,
+          logo: se,
           responsibilities: [
-            "Developed foundational product modules using React, Django REST Framework, and MongoDB.",
-            "Integrated AI and LLM modules into production codebase and built prototype modules for future use."
+            "Developed product modules using React for dynamic interfaces, Django REST Framework for scalable backend APIs, and MongoDB for efficient and reliable data storage and management.",
+            "Integrated AI and LLM components into the production codebase, while also prototyping new modules for support integration"
           ]
         }, {
           title: "Software Developer Intern",
           company: "Exposys Data Labs",
           link: "https://www.linkedin.com/company/upchat-technologies/",
           date: "Oct, 2023 - Nov, 2023",
-          logo: edlLogo,
+          logo: se,
           responsibilities: [
-            "Django framework and MySQL for backend database operations, while frontend with HTML and CSS.",
-            "Created custom models, custom model managers, handled different users, assigned permissions.",
-            "Implemented CRUD operations, enabling seamless data management, decreased 20% in loading times."
+            "Built and maintained full-stack applications using Django with MySQL for backend operations and HTML/CSS for clean, responsive frontend development.",
+            "Developed custom models and managers, implemented role-based permissions for multiple user types, and optimized CRUD operations to improve data handling efficiency and reduce loading time."
           ]
         }].map((exp, index) => (
           <div key={index} className="relative pl-12">
@@ -50,7 +59,7 @@ const Experience = ({ dayTheme }) => {
               <img 
                 src={exp.logo} 
                 alt="company_logo" 
-                className="w-14 h-14 rounded-lg object-cover cursor-pointer" 
+                className="w-14 h-14 rounded-lg object-cover cursor-pointer bg-white p-1"
                 onClick={() => window.open(exp.link, '_blank')} 
               />
               <div className="space-y-1">

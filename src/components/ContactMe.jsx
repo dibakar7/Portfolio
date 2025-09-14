@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, forwardRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
@@ -7,7 +7,7 @@ const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-const ContactMe = ({ dayTheme }) => {
+const ContactMe = forwardRef(({ dayTheme }, ref)=> {
   const form = useRef();
   const [status, setStatus] = useState(null);
   const [isError, setIsError] = useState(false);
@@ -31,20 +31,19 @@ const ContactMe = ({ dayTheme }) => {
   };
 
   return (
-    <div className={`w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
+    <div ref={ref} className={`w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
       <div className="flex items-center justify-center w-full mb-8">
         <hr className="flex-grow border-t border-gray-400" />
         <span className="mx-4 text-3xl font-bold tracking-wide xs:text-2xl">Contact Me</span>
         <hr className="flex-grow border-t border-gray-400" />
       </div>
-      <div className="flex flex-row w-full justify-center items-start gap-10 xs:flex-col">
-        <div className="w-full max-w-md mb-12 flex flex-col gap-6">
+      <div className="flex flex-row w-full justify-center items-start gap-10 align-center xt:flex-col">
+        <div className="w-full max-w-md mb-12 flex flex-col gap-6 ">
           <div>
             <h3 className={`text-lg xs:text-md font-medium tracking-wide ${dayTheme ? 'text-gray-800' : 'text-gray-300'}`}>Personal Email</h3>
             <p className="text-[17px] font-normal xs:text-sm text-gray-700 dark:text-gray-100 mt-1 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg w-fit">
               itsdibakar007@gmail.com
             </p>
-
           </div>
 
           <div>
@@ -115,6 +114,6 @@ const ContactMe = ({ dayTheme }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ContactMe;

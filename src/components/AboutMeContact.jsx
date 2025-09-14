@@ -3,6 +3,7 @@ import animePhoto from "../assets/about.png"
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { FaKaggle } from "react-icons/fa";
 
 const AboutMeContact = ({dayTheme}) => {
   return (
@@ -36,6 +37,10 @@ const AboutMeContact = ({dayTheme}) => {
           <a href="https://github.com/dibakar7" target="_blank" rel="noreferrer" className="text-primary flex flex-row gap-2 hover:text-secondary transition">
             <RxGithubLogo style={{width:"20px", height: "20px"}} />
             <span className="inline xs:hidden">GitHub</span>
+          </a>
+          <a href="https://www.kaggle.com/itspartha" target="_blank" rel="noreferrer" className="text-primary flex flex-row gap-2 hover:text-secondary transition">
+            <FaKaggle style={{width:"20px", height: "20px"}} />
+            <span className="inline xs:hidden">Kaggle</span>
           </a>
         </div>
         <div className="flex items-center justify-center w-full pt-10">

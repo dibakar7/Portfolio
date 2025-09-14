@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../assets/icon.PNG';
 
 const Footer = ({ dayTheme }) => {
-  const lastUpdated = '15 June 2025';
+  const lastUpdated = '14th September, 2025';
 
 
   return (
@@ -13,11 +13,11 @@ const Footer = ({ dayTheme }) => {
           : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'
       } shadow-inner rounded-t-2xl`}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 xs:flex-col">
         <img src={Icon} alt="icon" className="w-8 h-8 rounded-md xs:w-6 xs:h-6" />
+        <span className="text-[17px] xs:text-[12px] font-semibold tracking-wide text-center">Developed & Maintained by Dibakar</span>
       </div>
 
-      <span className="text-[17px] font-semibold tracking-wide text-center">© Dibakar 🙏🏻</span>
 
       <div className="text-[15px] font-light tracking-tight opacity-80 text-center xs:text-sm">
         Last Updated: <span className="font-medium">{lastUpdated}</span>

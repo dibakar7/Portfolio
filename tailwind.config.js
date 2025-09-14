@@ -10,6 +10,7 @@ module.exports = {
     },
     screens: {
       'xs': { 'max': '450px' },  // Custom breakpoint for 450px
+      'xt': {'max': '900px'},
     },
     boxShadow: {
       'custom': '0 4px 30px rgba(0, 0, 0, 0.1)', // Example custom shadow

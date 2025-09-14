@@ -1,5 +1,7 @@
 import React from 'react';
-import JULogo from "../assets/Jadavpur_University_Logo.png";
+// import JULogo from "../assets/Jadavpur_University_Logo.png";
+import JULogo from "../assets/education.png";
+
 
 const Education = ({ dayTheme }) => {
   return (
@@ -22,7 +24,7 @@ const Education = ({ dayTheme }) => {
           degree: "M.E in Computer Science & Engineering",
           university: "Jadavpur University",
           link: "https://jadavpuruniversity.in/",
-          date: "CGPA - ___ | Aug 2024 - Present",
+          date: "CGPA - 8.43 | Aug 2024 - Present",
           logo: JULogo
         }, {
           degree: "B.E in Information Technology",
