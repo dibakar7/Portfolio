@@ -1,5 +1,4 @@
 import React from 'react';
-import suitcase from "../assets/suitcase.png"
 import se from "../assets/programmer.png"
 
 const Experience = ({ dayTheme }) => {
