@@ -3,7 +3,6 @@ import nightThemeIcon from "../assets/full-moon.png";
 import dayThemeIcon from "../assets/sun.png";
 import Icon from "../assets/icon.PNG"
 import { GoDownload } from "react-icons/go";
-import BackgroundWaves from './stringBG';
 
 const Header = ({dayTheme, setDayTheme, scrollToContact}) => {
   return (
