@@ -4,10 +4,17 @@ import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaKaggle } from "react-icons/fa";
+import BackgroundWaves from './stringBG';
 
 const AboutMeContact = ({dayTheme}) => {
   return (
-    <div className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} p-10`}>
+    <div className={`relative overflow-hidden min-h-96 w-11/12 px-6 md:px-24 shadow-2xl rounded-2xl mb-40 flex flex-col items-center backdrop-blur-sm
+      ${
+        dayTheme
+          ? "bg-gradient-to-r from-yellow-50 via-blue-50 to-blue-100 text-black"
+          : "bg-gradient-to-r from-slate-900 via-slate-800 to-gray-950 text-white"
+      } p-10`}>
+        <BackgroundWaves dayTheme={dayTheme} />
         <div className="flex items-center justify-center w-full mb-10">
             <hr className="flex-grow border-t border-gray-400" />
             <span className="mx-4 text-3xl font-bold tracking-wide xs:text-2xl">About Me</span>

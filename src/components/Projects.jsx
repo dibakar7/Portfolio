@@ -3,6 +3,7 @@ import githubWhite from "../assets/github-mark-white.png"
 import githubBlack from "../assets/github-mark.png"
 import website from "../assets/website.png"
 import doc_archive from "../assets/doc-archive-bgi-1.png"
+import BackgroundWaves from './stringBG';
 
 const Projects = ({ dayTheme }) => {
   const projects = [
@@ -75,7 +76,13 @@ const Projects = ({ dayTheme }) => {
 
   return (
     <div
-      className={`min-h-96 w-11/12 px-15 shadow-md rounded-sm mb-40 flex flex-col items-center xs:px-10 ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} p-10`}>
+      className={`relative overflow-hidden min-h-96 w-11/12 px-6 md:px-24 shadow-2xl rounded-2xl mb-40 flex flex-col items-center backdrop-blur-sm
+      ${
+        dayTheme
+          ? "bg-gradient-to-r from-yellow-50 via-blue-50 to-blue-100 text-black"
+          : "bg-gradient-to-r from-slate-900 via-slate-800 to-gray-950 text-white"
+      } p-10`}>
+      <BackgroundWaves dayTheme={dayTheme} />
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
         <hr className="flex-grow border-t border-gray-400" />

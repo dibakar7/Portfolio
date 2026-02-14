@@ -1,10 +1,16 @@
 import React from 'react';
 import se from "../assets/programmer.png"
+import BackgroundWaves from './stringBG';
 
 const Experience = ({ dayTheme }) => {
   return (
-    <div className={`min-h-96 w-11/12 px-5 shadow-md rounded-sm mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} p-10`}>
-      
+    <div className={`relative overflow-hidden min-h-96 w-11/12 px-6 md:px-24 shadow-2xl rounded-2xl mb-40 flex flex-col items-center backdrop-blur-sm
+      ${
+        dayTheme
+          ? "bg-gradient-to-r from-yellow-50 via-blue-50 to-blue-100 text-black"
+          : "bg-gradient-to-r from-slate-900 via-slate-800 to-gray-950 text-white"
+      } p-10`}>
+      <BackgroundWaves dayTheme={dayTheme}/>
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-12">
         <hr className="flex-grow border-t border-gray-400" />
@@ -25,7 +31,8 @@ const Experience = ({ dayTheme }) => {
           date: "August, 2025 - Present",
           logo: se,
           responsibilities: [
-            "Currently engaged in literature review and exploring the implementation of various machine learning approaches, including the integration of vision-language models (VLMs) and large language models (LLMs), while leveraging different cloud platforms AWS, Azure."
+            "Conducting an in-depth literature review and implementing a range of machine learning methodologies, including traditional ML models, neural networks, and Bayesian optimization, with ongoing exploration of generative modeling techniques deployed on AWS cloud infrastructure.",
+            "Developing and evaluating data-driven solutions using high-impact Python libraries such as PyTorch, scikit-learn, scipy, and pandas for model development, experimentation, and performance analysis."
           ]
         },
           {

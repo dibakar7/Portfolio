@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../assets/icon.PNG';
 
 const Footer = ({ dayTheme }) => {
-  const lastUpdated = '14th September, 2025';
+  const lastUpdated = '14th February 2026';
 
 
   return (

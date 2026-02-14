@@ -2,7 +2,7 @@ import React, { useRef, useState, forwardRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
-
+import BackgroundWaves from './stringBG';
 const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -31,7 +31,8 @@ const ContactMe = forwardRef(({ dayTheme }, ref)=> {
   };
 
   return (
-    <div ref={ref} className={`w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
+    <div ref={ref} className={`relative overflow-hidden w-11/12 px-6 py-10 shadow-md rounded-md mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'}`}>
+      <BackgroundWaves dayTheme={dayTheme} />
       <div className="flex items-center justify-center w-full mb-8">
         <hr className="flex-grow border-t border-gray-400" />
         <span className="mx-4 text-3xl font-bold tracking-wide xs:text-2xl">Contact Me</span>
@@ -68,7 +69,7 @@ const ContactMe = forwardRef(({ dayTheme }, ref)=> {
           </div>
         </div>
 
-        <div className={`w-full max-w-2xl p-6 rounded-md shadow-inner shadow-lg ${dayTheme ? 'bg-white' : 'bg-gray-800'}`}>
+        <div className={`w-full max-w-2xl p-6 rounded-md shadow-inner  ${dayTheme ? 'bg-white' : 'bg-gray-800'}`}>
           <h3 className="text-2xl xs:text-md font-semibold mb-4">Send Me a Message</h3>
           <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
             <input

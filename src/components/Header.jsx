@@ -3,6 +3,7 @@ import nightThemeIcon from "../assets/full-moon.png";
 import dayThemeIcon from "../assets/sun.png";
 import Icon from "../assets/icon.PNG"
 import { GoDownload } from "react-icons/go";
+import BackgroundWaves from './stringBG';
 
 const Header = ({dayTheme, setDayTheme, scrollToContact}) => {
   return (
@@ -19,9 +20,9 @@ const Header = ({dayTheme, setDayTheme, scrollToContact}) => {
           <button className="hover:underline hidden sm:block" onClick={scrollToContact}>Contacts</button>
 
           <button className="flex items-center gap-1 hover:underline">
-            <a href='https://drive.google.com/file/d/1h039b21IbLtMcrdNbafSmGtuIbT3DbLS/view?usp=sharing' target='_blank' rel='noreferrer'><span className="inline xs:hidden">Download</span></a>
+            <a href='https://drive.google.com/file/d/1Sc9IeXeLx3I9vA6KswQyZ4b4NGozIJZ9/view?usp=sharing' target='_blank' rel='noreferrer'><span className="inline xs:hidden">Download</span></a>
             <span className="xs:inline-block sm:hidden">
-              <GoDownload className="w-6 h-6 xs:w-4 xs:h-4" onClick={()=> window.open("https://drive.google.com/file/d/1h039b21IbLtMcrdNbafSmGtuIbT3DbLS/view?usp=sharing")} />
+              <GoDownload className="w-6 h-6 xs:w-4 xs:h-4" onClick={()=> window.open("https://drive.google.com/file/d/1Sc9IeXeLx3I9vA6KswQyZ4b4NGozIJZ9/view?usp=sharing")} />
             </span>
           </button>
 

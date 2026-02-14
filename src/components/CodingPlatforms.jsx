@@ -4,6 +4,7 @@ import hackerRankLogo from "../assets/hackerrank-logo.png";
 import leetCodeLogo from "../assets/leetcode-logo-2.png";
 import codeChefLogo from "../assets/codechef-logo.png";
 import geeksForGeeksLogo from "../assets/gfg-logo.png";
+import BackgroundWaves from './stringBG';
 
 const platforms = [
   {
@@ -60,8 +61,8 @@ const CodingPlatforms = ({ dayTheme }) => {
   };
 
   return (
-    <div className={`min-h-96 w-11/12 px-4 shadow-md rounded-sm mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} py-10`}>
-
+    <div className={`relative overflow-hidden min-h-96 w-11/12 px-4 shadow-md rounded-sm mb-40 flex flex-col items-center ${dayTheme ? 'bg-gradient-to-r from-yellow-50 to-blue-100 text-black' : 'bg-gradient-to-r from-slate-800 to-gray-900 text-white'} py-10`}>
+      <BackgroundWaves dayTheme={dayTheme} />
       {/* Section Header */}
       <div className="flex items-center justify-center w-full mb-10">
         <hr className="flex-grow border-t border-gray-400" />
