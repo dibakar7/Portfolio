@@ -1,5 +1,5 @@
 import React from "react"
-import { color, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import TypeAnimationComp from "./TypeAnimationComp"
 import Portfolio from "../assets/shirt-image-rbg.png"
 import BackgroundWaves from "./stringBG"
