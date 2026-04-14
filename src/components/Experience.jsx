@@ -28,12 +28,12 @@ const Experience = ({ dayTheme }) => {
           title: "Research Intern (AI/ML)",
           company: "TCS - Research",
           link: "https://www.linkedin.com/showcase/tcs-research/",
-          date: "August, 2025 - Present",
+          date: "August, 2025 - March, 2026",
           logo: se,
           responsibilities: [
-            "Conducting an in-depth literature review and implementing a range of machine learning methodologies, including traditional ML models, neural networks, and Bayesian optimization, with ongoing exploration of generative modeling techniques deployed on AWS cloud infrastructure.",
-            "Developing and evaluating data-driven solutions using high-impact Python libraries such as PyTorch, scikit-learn, scipy, and pandas for model development, experimentation, and performance analysis."
-          ]
+            "Conducted an in-depth literature review and implementing a range of machine learning methodologies, including traditional ML models, neural networks, and Bayesian optimization, with ongoing exploration of generative modeling techniques deployed on AWS cloud infrastructure.",
+            "Developed and evaluated data-driven solutions using high-impact Python libraries such as PyTorch, scikit-learn, scipy, and pandas for model development, experimentation, and performance analysis."
+            ]
         },
           {
           title: "Software Engineer Intern",
