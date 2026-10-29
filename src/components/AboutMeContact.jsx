@@ -25,9 +25,11 @@ const AboutMeContact = ({dayTheme}) => {
             <img src={animePhoto} alt="doddle-image" className="w-[60%] h-auto object-contain xs:pt-5" />
           </div>
           <div className="w-full md:w-3/5 text-base leading-relaxed text-justify break-words xs:text-sm">
-            I’m a postgraduate student in Computer Science & Engineering at Jadavpur University, driven by a deep passion for clean code, scalable backend systems, and the emerging frontiers of AI and Machine Learning. With a strong academic foundation and hands-on experience from internships, I’ve developed production-grade modules and integrated cutting-edge LLM features into real-world applications.
+            I’m an aspiring AI/ML researcher with an M.E. in Computer Science & Engineering from Jadavpur University (CGPA 9.03, First Class with Distinction). I’m driven by a passion for clean code, scalable backend systems, and the frontiers of AI and Machine Learning. With a strong academic foundation and hands-on experience from internships, I’ve developed production-grade modules and integrated cutting-edge LLM features into real-world applications.            
             <br /><br />
-            I constantly strive for optimal approaches and elegant solutions, love to face and handle challenges. Guided by a clear vision to build meaningful, future-ready technologies, I aim to contribute solutions that are not only efficient but truly impactful.
+            My interests include deep learning for audio, signal processing, and computer vision, along with AI for sustainable solutions. I constantly strive for optimal approaches and elegant solutions, love to face and handle challenges. Guided by a clear vision to build meaningful, future-ready technologies, I aim to contribute solutions that are not only efficient but truly impactful.
+            <br /><br />
+            Open to opportunities in AI/ML research and engineering.
           </div>
         </div>
 
@@ -48,6 +50,10 @@ const AboutMeContact = ({dayTheme}) => {
           <a href="https://www.kaggle.com/itspartha" target="_blank" rel="noreferrer" className="text-primary flex flex-row gap-2 hover:text-secondary transition">
             <FaKaggle style={{width:"20px", height: "20px"}} />
             <span className="inline xs:hidden">Kaggle</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=78_l9LwAAAAJ&hl=en" target="_blank" rel="noreferrer" className="text-primary flex flex-row gap-2 hover:text-secondary transition">
+            <FaKaggle style={{width:"20px", height: "20px"}} />
+            <span className="inline xs:hidden">Google Scholar</span>
           </a>
         </div>
         <div className="flex items-center justify-center w-full pt-10">
