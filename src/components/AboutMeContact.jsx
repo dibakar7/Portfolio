@@ -3,7 +3,7 @@ import animePhoto from "../assets/about.png"
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
-import { FaKaggle } from "react-icons/fa";
+import { FaKaggle, FaGoogleScholar } from "react-icons/fa";
 import BackgroundWaves from './stringBG';
 
 const AboutMeContact = ({dayTheme}) => {
@@ -52,7 +52,7 @@ const AboutMeContact = ({dayTheme}) => {
             <span className="inline xs:hidden">Kaggle</span>
           </a>
           <a href="https://scholar.google.com/citations?user=78_l9LwAAAAJ&hl=en" target="_blank" rel="noreferrer" className="text-primary flex flex-row gap-2 hover:text-secondary transition">
-            <FaKaggle style={{width:"20px", height: "20px"}} />
+            <FaGoogleScholar style={{width:"20px", height: "20px"}} />
             <span className="inline xs:hidden">Google Scholar</span>
           </a>
         </div>
