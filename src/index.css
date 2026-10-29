@@ -1,4 +1,4 @@
-@tailwind  base;
+/* @tailwind  base;
 @tailwind  components;
 @tailwind  utilities;
 
@@ -24,6 +24,40 @@ html {
     color: theme('colors.day-text');
 }
   
+.night-theme {
+    background-color: theme('colors.night-bg');
+    color: theme('colors.night-text');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply font-sans;
+}
+
+h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+}
+
+.bg-primary-color {
+    background-color: #4E545C;
+}
+
+.gray-primary-color {
+    @apply bg-gradient-to-br from-[#f5f2ef] to-white;
+}
+
+.day-theme {
+    background-color: theme('colors.day-bg');
+    color: theme('colors.day-text');
+}
+
 .night-theme {
     background-color: theme('colors.night-bg');
     color: theme('colors.night-text');

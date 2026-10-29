@@ -15,9 +15,18 @@ module.exports = {
     boxShadow: {
       'custom': '0 4px 30px rgba(0, 0, 0, 0.1)', // Example custom shadow
     },
+    // fontFamily: {
+    //   sans: ['Consolas', 'ui-sans-serif', 'system-ui'],
+    //   mono: ['Consolas', 'ui-monospace', 'SFMono-Regular'],
+    // },
+    // fontFamily: {
+    //   sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    //   mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+    // },
     fontFamily: {
-      sans: ['Consolas', 'ui-sans-serif', 'system-ui'],
-      mono: ['Consolas', 'ui-monospace', 'SFMono-Regular'],
+      sans: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
     },
     keyframes: {
       pulseScale: {

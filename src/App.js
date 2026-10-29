@@ -9,6 +9,8 @@ import Footer from "./components/footer";
 import CodingPlatforms from "./components/CodingPlatforms";
 import AboutMeContact from "./components/AboutMeContact";
 import ContactMe from "./components/ContactMe";
+import Publications from "./components/Publications";
+import PortfolioBackground from "./components/PortfolioBackground";
 
 function App() {
   const contactRef = useRef(null);
@@ -18,7 +20,7 @@ function App() {
   const [dayTheme, setDayTheme] = useState(false);
   return (
     <div className={`relative overflow-hidden ${dayTheme ? `gray-primary-color`: `bg-primary-color`}`}>
-      {/* <PortfolioBackground /> */}
+      <PortfolioBackground dayTheme={dayTheme} />
       <div className="flex flex-col w-full justify-between items-center">
         <Header dayTheme={dayTheme} setDayTheme={setDayTheme} scrollToContact={scrollToContact}/>
       </div>
@@ -29,6 +31,7 @@ function App() {
         <Education dayTheme={dayTheme} />
         <Skills dayTheme={dayTheme} />
         <Projects dayTheme={dayTheme} />
+        <Publications dayTheme={dayTheme} />
         <CodingPlatforms dayTheme={dayTheme} />
         <ContactMe dayTheme={dayTheme} ref={contactRef} className="scroll-mt-20"/>
         <Footer dayTheme={dayTheme} />

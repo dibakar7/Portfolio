@@ -1,64 +1,51 @@
-import * as THREE from 'three';
-import React, { useRef, useEffect } from 'react';
+import React from "react";
 
-const ProfileBackground = () => {
-  const mountRef = useRef(null);
+const WORDS = ["Curiosity.", "Compute.", "Creation."];
+const FILL_ALPHA = { day: 0.07, night: 0.09 };
+const STROKE_ALPHA = { day: 0.3, night: 0.35 };
 
-  useEffect(() => {
-    // Scene setup
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
+const PortfolioBackground = ({ dayTheme }) => {
+  const ink = dayTheme ? "0, 0, 0" : "255, 255, 255";
+  const fill = `rgba(${ink}, ${dayTheme ? FILL_ALPHA.day : FILL_ALPHA.night})`;
+  const stroke = `rgba(${ink}, ${dayTheme ? STROKE_ALPHA.day : STROKE_ALPHA.night})`;
 
-    // Renderer setup
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    mountRef.current.appendChild(renderer.domElement);
+  const base = {
+    lineHeight: 0.88,
+    fontWeight: 800,
+    letterSpacing: "-0.045em",
+    fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    whiteSpace: "nowrap",
+    userSelect: "none",
+    transition: "color 0.5s ease, -webkit-text-stroke-color 0.5s ease",
+  };
 
-    // Create a collection of stars
-    const stars = [];
-    const numStars = 1000;
-
-    for (let i = 0; i < numStars; i++) {
-      const geometry = new THREE.CircleGeometry(0.1, 32);
-      const material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.5 });
-      const star = new THREE.Points(geometry, material);
-
-      // Random initial position
-      star.position.set(
-        THREE.MathUtils.randFloatSpread(10),
-        THREE.MathUtils.randFloatSpread(10),
-        THREE.MathUtils.randFloatSpread(10)
-      );
-
-      stars.push(star);
-      scene.add(star);
-    }
-
-    // Animation loop
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      // Slowly move stars in a small random radius
-      const elapsedTime = Date.now() * 0.001;
-      stars.forEach(star => {
-        star.position.x = THREE.MathUtils.randFloatSpread(0.2) * Math.sin(elapsedTime + star.position.x);
-        star.position.y = THREE.MathUtils.randFloatSpread(0.2) * Math.cos(elapsedTime + star.position.y);
-      });
-
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    // Clean up
-    return () => {
-      mountRef.current.removeChild(renderer.domElement);
-    };
-  }, []);
-
-  return <div className="fixed top-0 left-0 w-full h-full -z-10" ref={mountRef}></div>;
+  return (
+    <div
+      aria-hidden="true"
+      className={`fixed inset-0 z-0 pointer-events-none overflow-hidden transition-colors duration-500 ${
+        dayTheme ? "bg-neutral-100" : "bg-black"
+      }`}
+    >
+      <div className="absolute inset-0 flex flex-col justify-center items-end gap-[1.5vh] px-[4vw]">
+        {WORDS.map((word, i) => {
+          const outlined = i === 1;
+          return (
+            <div
+              key={word}
+              className="text-right text-[length:min(19vw,29vh)] md:text-[length:min(16vw,29vh)]"
+              style={{
+                ...base,
+                color: outlined ? "transparent" : fill,
+                WebkitTextStroke: outlined ? `1.5px ${stroke}` : "0",
+              }}
+            >
+              {word}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
-export default ProfileBackground;
+export default PortfolioBackground;
