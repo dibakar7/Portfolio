@@ -92,7 +92,7 @@ const AboutMe = ({ dayTheme }) => {
         {/* Role animation */}
         <motion.div
           variants={fadeUp}
-          className={`text-lg md:text-xl font-medium font-mono mb-4 ${
+          className={`mb-4 ${
             dayTheme ? "text-indigo-700" : "text-indigo-400"
           }`}
         >
