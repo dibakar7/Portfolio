@@ -30,13 +30,13 @@ const Education = ({ dayTheme }) => {
           degree: "M.E in Computer Science & Engineering",
           university: "Jadavpur University",
           link: "https://jadavpuruniversity.in/",
-          date: "CGPA - 8.52 | Aug 2024 - Present",
+          date: "CGPA - 9.03 (First Class with Distinction) | Aug 2024 - Sep 2026",
           logo: JULogo
         }, {
           degree: "B.E in Information Technology",
           university: "Jadavpur University",
           link: "https://jadavpuruniversity.in/",
-          date: "CGPA - 8.04 | Aug 2019 - July 2023",
+          date: "CGPA - 8.04 (First Class) | Aug 2019 - July 2023",
           logo: JULogo
         }].map((edu, index) => (
           <div key={index} className="relative pl-12">
